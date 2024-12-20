@@ -2,8 +2,10 @@ package com.ecommerce.productservice.services;
 
 
 import com.ecommerce.productservice.models.Product;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 
 public class DbProductService implements ProductService{
     @Override

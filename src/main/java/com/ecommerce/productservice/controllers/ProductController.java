@@ -14,27 +14,13 @@ import java.util.List;
 public class ProductController {
     ProductService productService;
 
+
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable("id") Long id) throws ProductNotFoundException {
-
-//        ResponseEntity<Product> response = null;
-//
-//        try {
-//            Product product = productService.getSingleProduct(id);
-//            response = new ResponseEntity<>(
-//                    product,
-//                    HttpStatus.OK
-//            );
-//        }
-//        catch (RuntimeException e) {
-//            response = new ResponseEntity<>(
-//                    HttpStatus.BAD_GATEWAY
-//            );
-//        }
 
         ResponseEntity<Product> responseEntity = new ResponseEntity<>(
                 productService.getSingleProduct(id),
